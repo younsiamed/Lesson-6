@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 
-#define MODE 1
+#define MODE 0
 
 #ifndef MODE
 #error "Необходимо определить MODE"
@@ -10,12 +10,6 @@
 #define TRAINING_MODE
 #elif MODE == 1
 #define BATTLE_MODE
-#endif
-
-#ifdef TRAINING_MODE
-void add(int a, int b) {
-    std::cout << "Работаю в режиме тренировки" << std::endl;
-}
 #endif
 
 #ifdef BATTLE_MODE
